@@ -16,11 +16,11 @@
 
 
 
-require_once('./system/module.php');
+require_once('./modules/content/module.php');
 
 
 //HermaModule
-class HermaModule extends Module
+class HermaModule extends ContentModule
 {
 	//public
 	//methods
@@ -29,6 +29,18 @@ class HermaModule extends Module
 	public function __construct($id, $name)
 	{
 		parent::__construct($id, $name);
+		$this->module_id = $id;
+		$this->module_name = _('Herma');
+		$this->content_by = _('Sensor from');
+		$this->content_item = _('Sensor');
+		$this->content_items = _('Sensors');
+		$this->content_list_title = _('Sensor list');
+		$this->content_more_content = _('Other sensors...');
+		$this->content_open_text = _('View');
+		$this->content_submit = _('Register sensor');
+		$this->content_submit_progress
+			= _('Registration in progress, please wait...');
+		$this->content_title = _('Herma');
 	}
 }
 
