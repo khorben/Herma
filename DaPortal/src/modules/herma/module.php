@@ -26,11 +26,10 @@ class HermaModule extends ContentModule
 	//methods
 	//essential
 	//HermaModule::HermaModule
-	public function __construct($id, $name)
+	public function __construct($id, $name, $title = FALSE)
 	{
-		parent::__construct($id, $name);
-		$this->module_id = $id;
-		$this->module_name = _('Herma');
+		$title = ($title === FALSE) ? _('Herma') : $title;
+		parent::__construct($id, $name, $title);
 		$this->content_by = _('Sensor from');
 		$this->content_item = _('Sensor');
 		$this->content_items = _('Sensors');
